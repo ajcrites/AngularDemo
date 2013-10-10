@@ -3,10 +3,15 @@
 	<span class="create" ng-click="saveItem()">Create</span>
 	<div class="clearfix"></div>
 
+	<label>
+		Show important tasks only:
+		<input type="checkbox" ng-model="important">
+	</label>
+
 	<ul class="items">
-		<li class="todo-item" ng-repeat="item in items">
-		<!-- <li class="todo-item" ng-repeat="item in items | filter:{id: '1'}"> -->
+		<li class="todo-item" ng-repeat="item in items | filter: isImportant">
 			<span ng-click="goToDetailsPage($index)">{{item.text}}</span>
+			<input type="checkbox" ng-model="item.important">
 		</li>
 	</ul>
 </div>
