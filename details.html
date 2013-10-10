@@ -1,0 +1,9 @@
+<div id="dDetailsPage" ng-controller="DetailsCtrl">
+	<div ng-show="currentItem.text">
+		<h1>{{currentItem.text}}</h1>
+		<p>Created on {{currentItem.date}}</p>
+	</div>
+
+	<!-- Now let's do a redirect -->
+	<h1 ng-show="!currentItem.text">No items :(</h1>
+</div>

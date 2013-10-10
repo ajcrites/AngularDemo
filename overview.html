@@ -1,0 +1,12 @@
+<div id="dOverviewPage" ng-controller="OverviewCtrl" ng-init="initialize()">
+	<input id="iNew" type="text" ng-model="newItem" placeholder="Begin typing here..." no-char/>
+	<span class="create" ng-click="saveItem()">Create</span>
+	<div class="clearfix"></div>
+
+	<ul class="items">
+		<li class="todo-item" ng-repeat="item in items">
+		<!-- <li class="todo-item" ng-repeat="item in items | filter:{id: '1'}"> -->
+			<span ng-click="goToDetailsPage($index)">{{item.text}}</span>
+		</li>
+	</ul>
+</div>

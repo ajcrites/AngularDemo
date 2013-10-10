@@ -1,0 +1,209 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+body {
+	position: relative;
+	font-size: 20px;
+	color: #048C8C;
+}
+
+input {
+	border: 0;
+	border-bottom: 1px solid #048C8C;
+	color: #048C8C;
+}
+
+input:focus {
+	-webkit-appearance: none;
+	outline: none;
+}
+
+ul {
+	list-style: inside;
+}
+
+#iNew {
+	display: block;
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	height: 40px;
+	font-size: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+.inputs {
+	text-align: center;
+}
+
+.clearfix {
+	clear: both;
+}
+
+#hHeader {
+	position: relative;
+	width: 100%;
+	height: 75px;
+
+	text-align: center;
+	border-bottom: 1px solid #048C8C;
+}
+
+#hHeader h1 {
+	font-size: 30px;
+	padding-top: 7px;
+}
+
+#hHeader span {
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	font-size: 14px;
+}
+
+#fFooter span {
+	font-size: 14px;
+}
+
+#dPageContainer {
+	position: absolute;
+	top: 75px;
+	padding: 10px;
+	bottom: 60px;
+	left: 0;
+	right: 0;
+}
+
+.create {
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+	margin-right: 47px;
+
+	cursor: pointer;
+}
+
+.items {
+	clear: both;
+	margin-top: 100px;
+}
+
+.items li {
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+#fFooter {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	border-top: 1px solid #048C8C;
+	text-align: center;
+}
+
+#fFooter span {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+/* Placeholder styling */
+::-webkit-input-placeholder {
+	color: #048C8C;
+	opacity: 0.5;
+}

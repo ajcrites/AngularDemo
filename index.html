@@ -1,0 +1,23 @@
+<html ng-app="tododo">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="main.css">
+
+	</head>
+	<body ng-controller="MainCtrl">
+
+		<header id="hHeader" ng-controller="HeaderCtrl">
+			<h1 ng-click="goHome()">Tododo</h1>
+			<span>An app where you can todo and do</span>
+		</header>
+
+		<div id="dPageContainer" ng-view></div>
+
+		<footer id="fFooter" ng-controller="FooterCtrl">
+			<span>Made by {{author}}</span>
+		</footer>
+
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
