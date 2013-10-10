@@ -37,12 +37,19 @@ function($rootScope, $scope, $location) {
 
 	$scope.items = [{
 		'text': 'hey',
-		'date': 1231
+		'date': 1231,
+		'important': false,
 	}, {
 		'text': '2',
 		'date': 123123,
-		'id': 1
+		'important': true,
 	}];
+
+	$scope.important = false;
+
+	$scope.isImportant = function (item) {
+		return !$scope.important || item.important;
+	};
 
 	$scope.initialize = function() {
 		if ($rootScope.items) {
