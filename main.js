@@ -26,52 +26,34 @@ app.directive("noChar", function () {
 	}
 });
 
-app.controller('MainCtrl', ['$location', '$scope', '$rootScope',
-function($location, $scope, $rootScope) {
+app.controller('MainCtrl', ['$location', '$scope',
+function($location, $scope) {
 }]);
 
-app.controller('OverviewCtrl', ['$rootScope', '$scope', '$location', 
-function($rootScope, $scope, $location) {
-	$scope.newItem;
-	$scope.items = [];
+app.controller('OverviewCtrl', ['$scope', '$location', 'items',
+function($scope, $location, items) {
+	$scope.items = items;
 
-	$scope.items = [{
-		'text': 'hey',
-		'date': 1231
-	}, {
-		'text': '2',
-		'date': 123123,
-		'id': 1
-	}];
-
-	$scope.initialize = function() {
-		if ($rootScope.items) {
-			$scope.items = $rootScope.items;
-		}
-	}
-
-	$scope.saveItem = function() {
-		// $scope.items.push($scope.newItem);
-		$scope.items.push({
-			'text': $scope.newItem,
+	$scope.saveItem = function (items) {
+		items.items.push({
+			'text': items.newItem,
 			'date': Date.now(),
-			'id': Date.now() + '-' +$scope.newItem 
+			'id': Date.now() + '-' + items.newItem
 		})
 
 		//Reset
-		$scope.newItem = '';
+		items.newItem = '';
 	};
 
-	$scope.goToDetailsPage = function(index) {
-		$rootScope.currentItem = $scope.items[index];
-		$rootScope.items = $scope.items;
+	$scope.goToDetailsPage = function (item) {
+		items.currentItem = item;
 		$location.path('/details');
 	};
 }]);
 
-app.controller('DetailsCtrl', ['$scope', '$location',
-function($scope, $location) {
-
+app.controller('DetailsCtrl', ['$scope', '$location', 'items',
+function($scope, $location, items) {
+	$scope.currentItem = items.currentItem;
 }]);
 
 app.controller('FooterCtrl', ['$scope', function($scope) {
@@ -83,3 +65,18 @@ app.controller('HeaderCtrl', ['$scope', '$location', function($scope, $location)
 		$location.path('/');
 	}
 }]);
+
+app.factory("items", function () {
+	return {
+		items: [{
+			'text': 'hey',
+			'date': 1231
+		}, {
+			'text': '2',
+			'date': 123123,
+			'id': 1
+		}],
+		newItem: "",
+		currentItem: null,
+	};
+});
