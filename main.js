@@ -40,6 +40,12 @@ app.controller('OverviewCtrl', ['$scope', '$location', 'items',
 function($scope, $location, items) {
 	$scope.items = items;
 
+	$scope.important = false;
+
+	$scope.isImportant = function (item) {
+		return !$scope.important || item.important;
+	};
+
 	$scope.saveItem = function (items) {
 		items.items.push({
 			'text': items.newItem,
