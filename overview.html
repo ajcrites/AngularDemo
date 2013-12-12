@@ -9,7 +9,7 @@
 	</label>
 
 	<ul class="items">
-		<li class="todo-item" ng-repeat="item in items | filter: isImportant">
+		<li class="todo-item" ng-repeat="item in items.items | filter: isImportant">
 			<span ng-click="goToDetailsPage(items, item)">{{item.text}}</span>
 			<input type="checkbox" ng-model="item.important">
 		</li>
