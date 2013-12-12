@@ -22,6 +22,12 @@ app.directive("noChar", function () {
 					ev.preventDefault();
 				}
 			}
+
+			if (13 == ev.keyCode) {
+				scope.$apply(function () {
+					scope.saveItem(scope.items);
+				});
+			}
 		});
 	}
 });
@@ -45,7 +51,7 @@ function($scope, $location, items) {
 		items.newItem = '';
 	};
 
-	$scope.goToDetailsPage = function (item) {
+	$scope.goToDetailsPage = function (items, item) {
 		items.currentItem = item;
 		$location.path('/details');
 	};
